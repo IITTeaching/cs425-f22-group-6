@@ -8,16 +8,16 @@
 CREATE TABLE transaction (
   trans_id INT PRIMARY KEY,
   account_id INT
-  type STRING,
+  type VARCHAR,
   amount INT,
-  description STRING,
+  description VARCHAR,
   FOREIGN KEY account_id REFERENCES account
 );
 
 
 CREATE TABLE customer (
-  name STRING,
-  address STRING,
+  name VARCHAR,
+  address VARCHAR,
   branch_id INT,
   account_id INT[], 
   PRIMARY KEY (name, branch_id),
@@ -28,15 +28,15 @@ CREATE TABLE customer (
 
 CREATE TABLE branch (
   branch_id INT PRIMARY KEY,
-  address STRING
+  address VARCHAR
 );
 
 
 CREATE TABLE employee (
-  name NAME,
-  branch id INT,
-  type STRING,
-  address STRING,
+  name VARCHAR,
+  branch_id INT,
+  type VARCHAR,
+  address VARCHAR,
   salary INT,
   ssn STRING PRIMARY KEY,
   FOREIGN KEY branch_id REFERENCES branch
