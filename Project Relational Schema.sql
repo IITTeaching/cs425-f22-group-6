@@ -1,6 +1,6 @@
 ﻿CREATE TABLE account (
   account_id INT PRIMARY KEY,
-  type STRING,
+  type VARCHAR,
   balance INT
 );
 
