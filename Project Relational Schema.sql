@@ -34,7 +34,7 @@ CREATE TABLE customer_account (
   account_id INT,
   PRIMARY KEY (name, branch_id, account_id),
   FOREIGN KEY (name, branch_id) REFERENCES customer,
-  FOREIGN KEY (account_id) REFERENCES account
+  FOREIGN KEY (account_id) REFERENCES account ON DELETE CASCADE
 );
 
 
